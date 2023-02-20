@@ -7,15 +7,15 @@ type FormProps = {
   data: string
 }
 
+type MenuProps = {
+  name: string
+  description: string
+  price: number
+}
+
 type PlaceProps = {
   name: string
-  menuItems: [
-    {
-      name: string
-      description: string
-      price: number
-    }
-  ]
+  menuItems: MenuProps[]
 }
 
 const Form = ({ data }: FormProps) => {
@@ -24,7 +24,7 @@ const Form = ({ data }: FormProps) => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm()
+  } = useForm<MenuProps>()
   const name = JSON.parse(data)
   const { placesData, setPlacesData } = useContext(MyContext)
   const onSubmit = (data: any) => {
@@ -47,20 +47,49 @@ const Form = ({ data }: FormProps) => {
           <label htmlFor="name" className="my-2">
             Nome do prato
           </label>
-          <input {...register("name")} className="p-2 rounded-md" />
+          <input
+            {...register("name", {
+              required: { value: true, message: "Campo Obrigatório" },
+            })}
+            className="p-2 rounded-md"
+          />
+          {errors.name && (
+            <span className="text-red">{errors.name.message}</span>
+          )}
           <label htmlFor="price" className="my-2">
             Valor
           </label>
-          <input {...register("price")} className="p-2 rounded-md w-24" />
+          <input
+            {...register("price", {
+              required: { value: true, message: "Campo Obrigatório" },
+              pattern: {
+                value: /^[0-9]+\,[0-9]{2}$/,
+                message: "Digite um valor válido, ex. R$24,00",
+              },
+            })}
+            className="p-2 rounded-md w-24"
+            placeholder="R$ 99,00"
+          />
+          {errors.price && (
+            <span className="text-red">{errors.price.message}</span>
+          )}
           <label htmlFor="description" className="my-2">
             Descrição
           </label>
           <input
-            {...register("description")}
+            {...register("description", {
+              required: { value: true, message: "Campo Obrigatório" },
+              maxLength: {
+                value: 200,
+                message: "A descrição deve conter até 200 caracteres.",
+              },
+            })}
             className="h-32 rounded-md"
             placeholder="Insira uma descrição"
           />
-          <p className="my-2">*A descrição deve conter até 200 caracteres.</p>
+          {errors.description && (
+            <span className="text-red">{errors.description.message}</span>
+          )}
           <button type="submit">Salvar</button>
         </form>
       </div>
