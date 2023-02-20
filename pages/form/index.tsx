@@ -2,10 +2,20 @@ import Header from "../../src/components/Header"
 import { useForm } from "react-hook-form"
 import { useContext } from "react"
 import MyContext from "../../src/context/myContext"
-import { PlaceProps } from "../types"
 
 type FormProps = {
   data: string
+}
+
+type PlaceProps = {
+  name: string
+  menuItems: [
+    {
+      name: string
+      description: string
+      price: number
+    }
+  ]
 }
 
 const Form = ({ data }: FormProps) => {
