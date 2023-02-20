@@ -30,7 +30,6 @@ const Details = ({ data }: DetailProps) => {
             className="bg-gray mb-4 p-6 rounded-md"
             key={`${place}-${index}`}
           >
-            {/* <div className="h-12 w-12 bg-yellow"></div> */}
             <div className="flex justify-between items-end">
               <div className="text-white font-bold">{place.name}</div>
               <div className="text-white font-bold">R$ {place.price}</div>

@@ -1,8 +1,9 @@
 import type { NextPage } from "next"
 import Header from "../src/components/Header"
 import Card from "../src/components/Card"
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
 import MyContext from "../src/context/myContext"
+import { PlaceProps } from "./types"
 
 const Home: NextPage = () => {
   const { placesData } = useContext(MyContext)
@@ -18,7 +19,7 @@ const Home: NextPage = () => {
           {placesData.length} lugares cadastrados
         </p>
         {placesData &&
-          placesData?.map((place, index) => (
+          placesData?.map((place: PlaceProps, index: number) => (
             <Card place={place} index={index} key={`${place}-${index}`} />
           ))}
       </div>
