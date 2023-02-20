@@ -1,10 +1,10 @@
-export type MenuItems = {
+type MenuItems = {
   name: string
   description: string
   price: number
 }
 
-export type PlaceProps = {
+type PlaceProps = {
   name: string
   menuItems: MenuItems[]
 }

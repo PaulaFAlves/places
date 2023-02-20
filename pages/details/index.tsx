@@ -1,5 +1,4 @@
 import Header from "../../src/components/Header"
-import { MenuItems, PlaceProps } from "../types"
 import { useContext } from "react"
 import MyContext from "../../src/context/myContext"
 import Link from "next/link"
@@ -7,6 +6,17 @@ import { BsPlusCircleFill } from "react-icons/bs"
 
 type DetailProps = {
   data: string
+}
+
+type MenuItems = {
+  name: string
+  description: string
+  price: number
+}
+
+type PlaceProps = {
+  name: string
+  menuItems: MenuItems[]
 }
 
 const Details = ({ data }: DetailProps) => {

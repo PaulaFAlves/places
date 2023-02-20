@@ -3,7 +3,17 @@ import Header from "../src/components/Header"
 import Card from "../src/components/Card"
 import { useContext } from "react"
 import MyContext from "../src/context/myContext"
-import { PlaceProps } from "./types"
+
+type PlaceProps = {
+  name: string
+  menuItems: [
+    {
+      name: string
+      description: string
+      price: number
+    }
+  ]
+}
 
 const Home: NextPage = () => {
   const { placesData } = useContext(MyContext)
