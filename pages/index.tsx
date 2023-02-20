@@ -22,7 +22,7 @@ const Home: NextPage = () => {
     <div className="bg-background h-screen bg-no-repeat bg-top">
       <div className="w-[90%] md:w-1/2 mx-auto">
         <Header />
-        <h1 className="text-yellow text-4xl font-bold my-4 font-poppins">
+        <h1 className="text-yellow text-4xl font-bold my-4 font-poppins tracking-wider">
           Lugares
         </h1>
         <p className="text-white my-4 font-nunito">

@@ -12,7 +12,7 @@ const Header = ({ backButton = false }) => {
     <div className="flex justify-center">
       <Link href="/">
         <MdOutlineArrowBackIosNew
-          className={`h-10 w-10 mt-2 ${!backButton && "invisible"} fill-white`}
+          className={`h-6 w-6 mt-4 ${!backButton && "invisible"} fill-white`}
         />
       </Link>
 

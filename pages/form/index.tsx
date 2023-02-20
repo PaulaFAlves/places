@@ -44,12 +44,23 @@ const Form = ({ data }: FormProps) => {
           {name}
         </h1>
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
-          <label htmlFor="name">Nome do prato</label>
+          <label htmlFor="name" className="my-2">
+            Nome do prato
+          </label>
           <input {...register("name")} className="p-2 rounded-md" />
-          <label htmlFor="price">Valor</label>
+          <label htmlFor="price" className="my-2">
+            Valor
+          </label>
           <input {...register("price")} className="p-2 rounded-md w-24" />
-          <label htmlFor="description">Descrição</label>
-          <input {...register("description")} className="p-2 h-32 rounded-md" />
+          <label htmlFor="description" className="my-2">
+            Descrição
+          </label>
+          <input
+            {...register("description")}
+            className="h-32 rounded-md"
+            placeholder="Insira uma descrição"
+          />
+          <p className="my-2">*A descrição deve conter até 200 caracteres.</p>
           <button type="submit">Salvar</button>
         </form>
       </div>
