@@ -14,6 +14,7 @@ module.exports = {
       white: "#ffffff",
       yellow: "#F3AA00",
       red: "#FF3333",
+      black: "#000000",
     },
     fontFamily: { poppins: ["Poppins"], nunito: ["Nunito Sans"] },
   },

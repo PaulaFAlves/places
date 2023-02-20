@@ -90,7 +90,12 @@ const Form = ({ data }: FormProps) => {
           {errors.description && (
             <span className="text-red">{errors.description.message}</span>
           )}
-          <button type="submit">Salvar</button>
+          <button
+            type="submit"
+            className="bg-yellow w-[100%] h-full rounded-md text-black font-poppins py-4 my-8"
+          >
+            Salvar
+          </button>
         </form>
       </div>
     </div>
