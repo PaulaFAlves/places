@@ -25,6 +25,13 @@ const Details = ({ data }: DetailProps) => {
 
   const place = placesData.find((place: PlaceProps) => place.name === name)
 
+  const formatPrice = (price: number) => {
+    let formattedPrice = Number(price).toFixed(2) + ""
+    formattedPrice = formattedPrice.replace(".", ",")
+
+    return formattedPrice
+  }
+
   return (
     <div className="bg-background h-screen bg-no-repeat bg-top">
       <div className="w-[90%] md:w-1/2 mx-auto">
@@ -42,7 +49,9 @@ const Details = ({ data }: DetailProps) => {
           >
             <div className="flex justify-between items-end">
               <div className="text-white font-bold">{place.name}</div>
-              <div className="text-white font-bold">R$ {place.price}</div>
+              <div className="text-white font-bold">
+                R$ {formatPrice(place.price)}
+              </div>
             </div>
             <p className="text-white">{place.description}</p>
           </div>
