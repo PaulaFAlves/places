@@ -23,4 +23,4 @@ Para rodar localmente, seguir os seguintes passos:
 ## Em produção
 
 Para por esse projeto em produção foi utilizada a ferramenta [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
-Para conferir o resultado, acessar [places-27p2c4tfj-paulafalves.vercel.app](places-27p2c4tfj-paulafalves.vercel.app)
+Para conferir o resultado, acessar [https://places-git-main-paulafalves.vercel.app/](https://places-git-main-paulafalves.vercel.app/)
