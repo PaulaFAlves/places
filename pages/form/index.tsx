@@ -76,7 +76,7 @@ const Form = ({ data }: FormProps) => {
           <label htmlFor="description" className="my-2">
             Descrição
           </label>
-          <input
+          <textarea
             {...register("description", {
               required: { value: true, message: "Campo Obrigatório" },
               maxLength: {
@@ -84,7 +84,7 @@ const Form = ({ data }: FormProps) => {
                 message: "A descrição deve conter até 200 caracteres.",
               },
             })}
-            className="h-32 rounded-md"
+            className="h-32 rounded-md p-2 text-black normal-case"
             placeholder="Insira uma descrição"
           />
           {errors.description && (
@@ -92,7 +92,7 @@ const Form = ({ data }: FormProps) => {
           )}
           <button
             type="submit"
-            className="bg-yellow w-[100%] h-full rounded-md text-black font-poppins py-4 my-8"
+            className="bg-yellow w-[90%] md:w-[50%] h-16 rounded-md text-black font-poppins py-4 my-8 m-auto absolute bottom-0 left-0 right-0"
           >
             Salvar
           </button>
