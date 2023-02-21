@@ -1,34 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Visando melhorar seu algoritmo de sugestão de lugares, a Wine Locals precisa conhecer o cardápio dos lugares (bares, restaurantes, lanchonetes, cafés, etc) exibidos no site.
 
-## Getting Started
+O objetivo deste projeto é a criação de funcionalidade de listagem de locais, bem como a listagem de pratos oferecidos por cada um deles e formulário para cadastro de novos pratos.
 
-First, run the development server:
+## Ferramentas
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Para o desenvolvimento deste projeto foram utilizadas as seguintes ferramentas:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ReactJS
+- NextJS
+- Typescript
+- Tailwind
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Para rodar localmente
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Para rodar localmente, seguir os seguintes passos:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Clonar o projeto
+2. Rodar npm install para instalar todas as dependencias
+3. Rodar npm run dev
+4. Abrir [http://localhost:3000](http://localhost:3000) com o browser.
 
-## Learn More
+## Em produção
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Para por esse projeto em produção foi utilizada a ferramenta [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+Para conferir o resultado, acessar [places-27p2c4tfj-paulafalves.vercel.app](places-27p2c4tfj-paulafalves.vercel.app)
