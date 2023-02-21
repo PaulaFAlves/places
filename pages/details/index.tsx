@@ -3,20 +3,10 @@ import { useContext } from "react"
 import MyContext from "../../src/context/myContext"
 import Link from "next/link"
 import { BsPlusCircleFill } from "react-icons/bs"
+import { MenuItems, PlaceProps } from "../../src/types/types"
 
 type DetailProps = {
   data: string
-}
-
-type MenuItems = {
-  name: string
-  description: string
-  price: number
-}
-
-type PlaceProps = {
-  name: string
-  menuItems: MenuItems[]
 }
 
 const Details = ({ data }: DetailProps) => {

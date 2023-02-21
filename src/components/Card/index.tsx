@@ -2,22 +2,7 @@ import Link from "next/link"
 import { SlPlus } from "react-icons/sl"
 import { useContext } from "react"
 import MyContext from "../../context/myContext"
-
-type MenuItems = {
-  name: string
-  description: string
-  price: number
-}
-
-type PlaceProps = {
-  name: string
-  menuItems: MenuItems[]
-}
-
-type CardProps = {
-  place: PlaceProps
-  index: number
-}
+import { MenuItems, PlaceProps, CardProps } from "../../types/types"
 
 const Card = ({ place }: CardProps) => {
   const { placesData } = useContext(MyContext)

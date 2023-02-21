@@ -2,20 +2,10 @@ import Header from "../../src/components/Header"
 import { useForm } from "react-hook-form"
 import { useContext } from "react"
 import MyContext from "../../src/context/myContext"
+import { MenuItems, PlaceProps } from "../../src/types/types"
 
 type FormProps = {
   data: string
-}
-
-type MenuProps = {
-  name: string
-  description: string
-  price: number
-}
-
-type PlaceProps = {
-  name: string
-  menuItems: MenuProps[]
 }
 
 const Form = ({ data }: FormProps) => {
@@ -24,7 +14,7 @@ const Form = ({ data }: FormProps) => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<MenuProps>()
+  } = useForm<MenuItems>()
   const name = JSON.parse(data)
   const { placesData, setPlacesData } = useContext(MyContext)
   const onSubmit = (data: any) => {
