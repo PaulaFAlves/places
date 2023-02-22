@@ -15,8 +15,8 @@ const Details = ({ data }: DetailProps) => {
 
   const place = placesData.find((place: PlaceProps) => place.name === name)
 
-  const formatPrice = (price: number) => {
-    let formattedPrice = Number(price).toFixed(2) + ""
+  const formatPrice = (price: any) => {
+    let formattedPrice = parseInt(price).toFixed(2) + ""
     formattedPrice = formattedPrice.replace(".", ",")
 
     return formattedPrice

@@ -6,7 +6,6 @@ import { MenuItems, PlaceProps, CardProps } from "../../types/types"
 
 const Card = ({ place }: CardProps) => {
   const { placesData } = useContext(MyContext)
-  console.log("places ", placesData)
 
   return (
     <div className="flex">
